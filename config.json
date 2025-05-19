@@ -6,6 +6,10 @@
       "Id",
       "Name"
     ],
+    "createFields": [
+      "Name",
+      "Id"
+    ],
     "editFields": [
       "Name"
     ],
