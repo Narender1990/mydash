@@ -8,7 +8,8 @@
       "Name"
     ],
     "createFields": [
-      "Name"
+      "Name",
+      "Id"
     ],
     "editFields": [
       "Name"
