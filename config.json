@@ -2,6 +2,7 @@
   {
     "table": "payments",
     "label": "Payments",
+    "Identifier": "Id",
     "displayFields": [
       "Id",
       "Name"
