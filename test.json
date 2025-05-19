@@ -1,1 +1,22 @@
-{"tets":"test"}
+[
+  {
+    "orgName": "Acme Corp",
+    "slug": "acmecorp",
+    "dbType": "mysql",
+    "encryptedConnectionString": "U2FsdGVkX1+8n19sdf...",
+    "createdAt": "2025-05-17T10:25:00Z",
+    "createdByUserId": "user_9835e7c",
+    "configTemplateVersion": "v1.0",
+    "isActive": true
+  },
+  {
+    "orgName": "Beta Ltd",
+    "slug": "betaltd",
+    "dbType": "mysql",
+    "encryptedConnectionString": "U2FsdGVkX1+xyz123...",
+    "createdAt": "2025-05-18T11:45:00Z",
+    "createdByUserId": "user_9823af9",
+    "configTemplateVersion": "v1.1",
+    "isActive": true
+  }
+]
