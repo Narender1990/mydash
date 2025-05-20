@@ -24,7 +24,7 @@
     },
     "pagination": {
       "enabled": true,
-      "loadMore": false
+      "loadMore": true
     },
     "ui": {
       "icon": "💰",
