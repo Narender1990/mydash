@@ -54,7 +54,7 @@
     },
     "pagination": {
       "enabled": true,
-      "loadMore": true
+      "loadMore": false
     },
     "ui": {
       "icon": "👥",
