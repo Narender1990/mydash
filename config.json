@@ -18,7 +18,7 @@
       "Name"
     ],
     "permissions": {
-      "allowCreate": true,
+      "allowCreate": false,
       "allowEdit": true,
       "allowDelete": false
     },
