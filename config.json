@@ -12,7 +12,9 @@
       "Avatar"
     ],
     "editFields": [
-      "Name"
+      "Name",
+      "Id",
+      "Avatar"
     ],
     "searchFields": [
       "Id",
