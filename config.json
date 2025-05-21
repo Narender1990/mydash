@@ -5,7 +5,8 @@
     "Identifier": "Id",
     "displayFields": [
       "Id",
-      "Name"
+      "Name",
+      "Avatar"
     ],
     "createFields": [
       "Name",
