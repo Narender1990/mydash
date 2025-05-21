@@ -8,8 +8,9 @@
       "Avatar"
     ],
     "createFields": [
+      "Id",
       "Name",
-      "Id"
+      "Avatar"
     ],
     "editFields": [
       "Name"
@@ -21,7 +22,7 @@
     "permissions": {
       "allowCreate": true,
       "allowEdit": true,
-      "allowDelete": false
+      "allowDelete": true
     },
     "pagination": {
       "enabled": true,
