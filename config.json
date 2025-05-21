@@ -4,7 +4,8 @@
     "label": "Payments",
     "Identifier": "Id",
     "displayFields": [
-      "Id"
+      "Id",
+      "Name"
     ],
     "createFields": [
       "Name",
