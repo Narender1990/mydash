@@ -25,10 +25,7 @@
       "allowEdit": true,
       "allowDelete": true
     },
-    "pagination": {
-      "enabled": true,
-      "loadMore": true
-    },
+    "DefaultLoadMoreIsPagination": true,
     "ui": {
       "icon": "💰",
       "color": "blue"
