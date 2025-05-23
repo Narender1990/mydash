@@ -4,6 +4,7 @@
     "label": "Payments",
     "Identifier": "Id",
     "displayFields": [
+      "Id",
       "Name",
       "Avatar"
     ],
