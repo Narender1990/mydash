@@ -5,17 +5,17 @@
     "Identifier": "Id",
     "displayFields": [
       "Id",
-      "Name",
-      "Avatar"
+      "PaymentId",
+      "CreatedAt"
     ],
     "createFields": [
       "Name",
-      "Avatar"
+      "CreatedAt"
     ],
     "editFields": [
       "Name",
       "Id",
-      "Avatar"
+      "CreatedAt"
     ],
     "searchFields": [
       "Id",
