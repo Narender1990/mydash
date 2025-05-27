@@ -5,16 +5,16 @@
     "Identifier": "Id",
     "displayFields": [
       "Id",
+      "MerchantTransactionId",
       "PaymentId",
       "CreatedAt"
     ],
     "createFields": [
-      "Name",
+      "MerchantTransactionId",,
       "CreatedAt"
     ],
     "editFields": [
-      "Name",
-      "Id",
+      "MerchantTransactionId",,
       "CreatedAt"
     ],
     "searchFields": [
