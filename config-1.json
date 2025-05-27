@@ -10,11 +10,11 @@
       "CreatedAt"
     ],
     "createFields": [
-      "MerchantTransactionId",,
+      "MerchantTransactionId",
       "CreatedAt"
     ],
     "editFields": [
-      "MerchantTransactionId",,
+      "MerchantTransactionId",
       "CreatedAt"
     ],
     "searchFields": [
