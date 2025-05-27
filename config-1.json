@@ -1,0 +1,65 @@
+[
+  {
+    "table": "payments",
+    "label": "Payments",
+    "Identifier": "Id",
+    "displayFields": [
+      "Id",
+      "PaymentId",
+      "CreatedAt"
+    ],
+    "createFields": [
+      "Name",
+      "CreatedAt"
+    ],
+    "editFields": [
+      "Name",
+      "Id",
+      "CreatedAt"
+    ],
+    "searchFields": [
+      "Id",
+      "Name"
+    ],
+    "permissions": {
+      "allowCreate": true,
+      "allowEdit": true,
+      "allowDelete": true
+    },
+    "DefaultLoadMoreIsPagination": true,
+    "ui": {
+      "icon": "💰",
+      "color": "blue"
+    }
+  },
+  {
+    "table": "clients",
+    "label": "Clients",
+    "Identifier": "Id",
+    "displayFields": [
+      "Id",
+      "Name"
+    ],
+    "editFields": [
+      "Id",
+      "Name"
+    ],
+    "searchFields": [
+      "Id",
+      "Name"
+    ],
+    "permissions": {
+      "allowCreate": true,
+      "allowEdit": true,
+      "allowDelete": false
+    },
+    "pagination": {
+      "enabled": true,
+      "loadMore": true
+    },
+    "ui": {
+      "icon": "👥",
+      "color": "green"
+    }
+  }
+]
