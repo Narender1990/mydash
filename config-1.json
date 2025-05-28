@@ -13,7 +13,6 @@
       "MerchantTransactionId",
       "CreatedAt",
       "PaymentId",
-      "ClientId",
       "GatewaysId",
       "StatusId",
       "Amount",
