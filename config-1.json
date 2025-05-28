@@ -11,7 +11,18 @@
     ],
     "createFields": [
       "MerchantTransactionId",
-      "CreatedAt"
+      "CreatedAt",
+      "Id",
+      "PaymentId",
+      "ClientId",
+      "GatewaysId",
+      "StatusId",
+      "Amount",
+      "CurrencyId",
+      "UserId",
+      "IsTest",
+      "ExpiryAt",
+      "PaymentData"
     ],
     "editFields": [
       "MerchantTransactionId",
