@@ -12,7 +12,6 @@
     "createFields": [
       "MerchantTransactionId",
       "CreatedAt",
-      "Id",
       "PaymentId",
       "ClientId",
       "GatewaysId",
