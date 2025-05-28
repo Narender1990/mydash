@@ -11,6 +11,7 @@
     ],
     "createFields": [
       "MerchantTransactionId",
+      "ClientId",
       "CreatedAt",
       "PaymentId",
       "GatewaysId",
