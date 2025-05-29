@@ -9,10 +9,11 @@
         {
           "table": "Payments",
           "label": "Payments",
+          "Identifier": "Id",
           "description": "Track all incoming and outgoing payments.",
           "displayFields": [
-            { "name": "Id", "label": "Payment ID", "type": "number" },
-            { "name": "Name", "label": "Payer Name", "type": "text" }
+            { "name": "Id", "label": "Payment ID" },
+            { "name": "Name", "label": "Payer Name" }
           ],
           "editFields": [
             { "name": "Id", "label": "Payment ID", "type": "number" },
@@ -37,21 +38,23 @@
               "accessRoles": ["admin", "finance"]
             },
             "allowEdit": {
-              "accessRoles": ["admin", "finance"]
+              "accessRoles": ["admin"]
             },
             "allowDelete": {
-              "accessRoles": ["admin", "finance"]
+              "accessRoles": ["admin"]
             }
           },
           "pagination": true,
           "ui": {
             "icon": "💰",
             "color": "blue"
-          }
+          },
+          "accessRoles": ["admin"]
         },
         {
           "table": "clients",
           "label": "Clients",
+          "Identifier": "Id",
           "description": "Manage business clients and stakeholders.",
           "displayFields": ["Id", "Name"],
           "editFields": ["Id", "Name"],
