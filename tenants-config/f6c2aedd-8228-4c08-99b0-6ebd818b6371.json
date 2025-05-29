@@ -1,0 +1,2185 @@
+{
+  "apiBaseUrl": "https://crud.webapis.in/api/v1/crud/",
+  "description": "This configuration allows you to manage core identity and access settings across your application, including user authentication, role-based permissions, and customization options.",
+  "groups": [
+    {
+      "name": "Applications",
+      "description": "Manage the registered applications that utilize the system for authentication and access control.",
+      "entities": [
+        {
+          "table": "apps",
+          "label": "apps",
+          "Identifier": "Id",
+          "description": "List of all applications",
+          "displayFields": [
+            {
+              "name": "UserId",
+              "label": "UserId"
+            },
+            {
+              "name": "Secret",
+              "label": "Secret"
+            },
+            {
+              "name": "Name",
+              "label": "Name"
+            },
+            {
+              "name": "TagLine",
+              "label": "TagLine"
+            },
+            {
+              "name": "LogoUrl",
+              "label": "LogoUrl"
+            },
+            {
+              "name": "RedirectUrl",
+              "label": "RedirectUrl"
+            },
+            {
+              "name": "ClientTypeId",
+              "label": "ClientTypeId"
+            },
+            {
+              "name": "AutoActivateUser",
+              "label": "AutoActivateUser"
+            },
+            {
+              "name": "MaxLoginAttempts",
+              "label": "MaxLoginAttempts"
+            },
+            {
+              "name": "IsEmailVerificationRequired",
+              "label": "IsEmailVerificationRequired"
+            },
+            {
+              "name": "IsMobileVerificationRequired",
+              "label": "IsMobileVerificationRequired"
+            }
+          ],
+          "editFields": [
+            {
+              "name": "UserId",
+              "label": "UserId",
+              "type": "select",
+              "relation": {
+                "table": "users",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "Secret",
+              "label": "Secret",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "Name",
+              "label": "Name",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "TagLine",
+              "label": "TagLine",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "LogoUrl",
+              "label": "LogoUrl",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "RedirectUrl",
+              "label": "RedirectUrl",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "ClientTypeId",
+              "label": "ClientTypeId",
+              "type": "select",
+              "relation": {
+                "table": "clienttypes",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "AutoActivateUser",
+              "label": "AutoActivateUser",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "MaxLoginAttempts",
+              "label": "MaxLoginAttempts",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "IsEmailVerificationRequired",
+              "label": "IsEmailVerificationRequired",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "IsMobileVerificationRequired",
+              "label": "IsMobileVerificationRequired",
+              "type": "text",
+              "relation": null
+            }
+          ],
+          "createFields": [
+            {
+              "name": "UserId",
+              "label": "UserId",
+              "type": "select",
+              "relation": {
+                "table": "users",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "Secret",
+              "label": "Secret",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "Name",
+              "label": "Name",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "TagLine",
+              "label": "TagLine",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "LogoUrl",
+              "label": "LogoUrl",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "RedirectUrl",
+              "label": "RedirectUrl",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "ClientTypeId",
+              "label": "ClientTypeId",
+              "type": "select",
+              "relation": {
+                "table": "clienttypes",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "AutoActivateUser",
+              "label": "AutoActivateUser",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "MaxLoginAttempts",
+              "label": "MaxLoginAttempts",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "IsEmailVerificationRequired",
+              "label": "IsEmailVerificationRequired",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "IsMobileVerificationRequired",
+              "label": "IsMobileVerificationRequired",
+              "type": "text",
+              "relation": null
+            }
+          ],
+          "searchFields": [
+            "Id",
+            "UserId",
+            "ClientId",
+            "Secret",
+            "Name",
+            "TagLine",
+            "LogoUrl",
+            "RedirectUrl",
+            "ClientTypeId",
+            "AutoActivateUser",
+            "MaxLoginAttempts",
+            "IsEmailVerificationRequired",
+            "IsMobileVerificationRequired",
+            "CreationDate",
+            "UpdateDate"
+          ],
+          "permissions": {
+            "allowCreate": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowEdit": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowDelete": {
+              "accessRoles": [
+                "root"
+              ]
+            }
+          },
+          "pagination": true,
+          "ui": {
+            "icon": "\uD83D\uDCF1",
+            "color": "gray"
+          },
+          "accessRoles": [
+            "root"
+          ]
+        },
+        {
+          "table": "apphierarchy",
+          "label": "apphierarchy",
+          "Identifier": "ParentAppId",
+          "description": "Structure and relationships of apps",
+          "displayFields": [
+            {
+              "name": "ParentAppId",
+              "label": "ParentAppId"
+            },
+            {
+              "name": "ChildAppId",
+              "label": "ChildAppId"
+            }
+          ],
+          "editFields": [
+            {
+              "name": "ParentAppId",
+              "label": "ParentAppId",
+              "type": "select",
+              "relation": {
+                "table": "apps",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "ChildAppId",
+              "label": "ChildAppId",
+              "type": "select",
+              "relation": {
+                "table": "apps",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            }
+          ],
+          "createFields": [
+            {
+              "name": "ParentAppId",
+              "label": "ParentAppId",
+              "type": "select",
+              "relation": {
+                "table": "apps",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "ChildAppId",
+              "label": "ChildAppId",
+              "type": "select",
+              "relation": {
+                "table": "apps",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            }
+          ],
+          "searchFields": [
+            "ParentAppId",
+            "ChildAppId"
+          ],
+          "permissions": {
+            "allowCreate": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowEdit": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowDelete": {
+              "accessRoles": [
+                "root"
+              ]
+            }
+          },
+          "pagination": true,
+          "ui": {
+            "icon": "\uD83C\uDF10",
+            "color": "gray"
+          },
+          "accessRoles": [
+            "root"
+          ]
+        },
+        {
+          "table": "appcustomfields",
+          "label": "appcustomfields",
+          "Identifier": "Id",
+          "description": "Custom fields defined for apps",
+          "displayFields": [
+            {
+              "name": "CustomFieldId",
+              "label": "CustomFieldId"
+            },
+            {
+              "name": "AppId",
+              "label": "AppId"
+            }
+          ],
+          "editFields": [
+            {
+              "name": "CustomFieldId",
+              "label": "CustomFieldId",
+              "type": "select",
+              "relation": {
+                "table": "customfields",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "AppId",
+              "label": "AppId",
+              "type": "select",
+              "relation": {
+                "table": "apps",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            }
+          ],
+          "createFields": [
+            {
+              "name": "CustomFieldId",
+              "label": "CustomFieldId",
+              "type": "select",
+              "relation": {
+                "table": "customfields",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "AppId",
+              "label": "AppId",
+              "type": "select",
+              "relation": {
+                "table": "apps",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            }
+          ],
+          "searchFields": [
+            "Id",
+            "CustomFieldId",
+            "AppId",
+            "CreationDate"
+          ],
+          "permissions": {
+            "allowCreate": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowEdit": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowDelete": {
+              "accessRoles": [
+                "root"
+              ]
+            }
+          },
+          "pagination": true,
+          "ui": {
+            "icon": "\uD83D\uDEE0\uFE0F",
+            "color": "gray"
+          },
+          "accessRoles": [
+            "root"
+          ]
+        },
+        {
+          "table": "appcustomfieldvalues",
+          "label": "appcustomfieldvalues",
+          "Identifier": "Id",
+          "description": "Values assigned to app custom fields",
+          "displayFields": [
+            {
+              "name": "AppId",
+              "label": "AppId"
+            },
+            {
+              "name": "FieldValue",
+              "label": "FieldValue"
+            },
+            {
+              "name": "CustomFieldId",
+              "label": "CustomFieldId"
+            }
+          ],
+          "editFields": [
+            {
+              "name": "AppId",
+              "label": "AppId",
+              "type": "select",
+              "relation": {
+                "table": "apps",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "FieldValue",
+              "label": "FieldValue",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "CustomFieldId",
+              "label": "CustomFieldId",
+              "type": "select",
+              "relation": {
+                "table": "customfields",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            }
+          ],
+          "createFields": [
+            {
+              "name": "AppId",
+              "label": "AppId",
+              "type": "select",
+              "relation": {
+                "table": "apps",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "FieldValue",
+              "label": "FieldValue",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "CustomFieldId",
+              "label": "CustomFieldId",
+              "type": "select",
+              "relation": {
+                "table": "customfields",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            }
+          ],
+          "searchFields": [
+            "Id",
+            "AppId",
+            "FieldValue",
+            "CustomFieldId",
+            "CreationDate"
+          ],
+          "permissions": {
+            "allowCreate": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowEdit": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowDelete": {
+              "accessRoles": [
+                "root"
+              ]
+            }
+          },
+          "pagination": true,
+          "ui": {
+            "icon": "\uD83D\uDCCA",
+            "color": "gray"
+          },
+          "accessRoles": [
+            "root"
+          ]
+        },
+        {
+          "table": "apploginproviders",
+          "label": "apploginproviders",
+          "Identifier": "Id",
+          "description": "Login providers available for apps",
+          "displayFields": [
+            {
+              "name": "AppId",
+              "label": "AppId"
+            },
+            {
+              "name": "AuthProviderId",
+              "label": "AuthProviderId"
+            }
+          ],
+          "editFields": [
+            {
+              "name": "AppId",
+              "label": "AppId",
+              "type": "select",
+              "relation": {
+                "table": "apps",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "AuthProviderId",
+              "label": "AuthProviderId",
+              "type": "select",
+              "relation": {
+                "table": "authproviders",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            }
+          ],
+          "createFields": [
+            {
+              "name": "AppId",
+              "label": "AppId",
+              "type": "select",
+              "relation": {
+                "table": "apps",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "AuthProviderId",
+              "label": "AuthProviderId",
+              "type": "select",
+              "relation": {
+                "table": "authproviders",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            }
+          ],
+          "searchFields": [
+            "Id",
+            "AppId",
+            "AuthProviderId",
+            "CreationDate"
+          ],
+          "permissions": {
+            "allowCreate": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowEdit": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowDelete": {
+              "accessRoles": [
+                "root"
+              ]
+            }
+          },
+          "pagination": true,
+          "ui": {
+            "icon": "\uD83D\uDD10",
+            "color": "gray"
+          },
+          "accessRoles": [
+            "root"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Authentication",
+      "description": "Configure authentication methods such as login mechanisms, multi-factor authentication (MFA), and identity providers.",
+      "entities": [
+        {
+          "table": "authproviders",
+          "label": "authproviders",
+          "Identifier": "Id",
+          "description": "Authentication providers supported",
+          "displayFields": [
+            {
+              "name": "Name",
+              "label": "Name"
+            },
+            {
+              "name": "Description",
+              "label": "Description"
+            }
+          ],
+          "editFields": [
+            {
+              "name": "Name",
+              "label": "Name",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "Description",
+              "label": "Description",
+              "type": "text",
+              "relation": null
+            }
+          ],
+          "createFields": [
+            {
+              "name": "Name",
+              "label": "Name",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "Description",
+              "label": "Description",
+              "type": "text",
+              "relation": null
+            }
+          ],
+          "searchFields": [
+            "Id",
+            "Name",
+            "Description",
+            "CreationDate"
+          ],
+          "permissions": {
+            "allowCreate": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowEdit": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowDelete": {
+              "accessRoles": [
+                "root"
+              ]
+            }
+          },
+          "pagination": true,
+          "ui": {
+            "icon": "\uD83D\uDEE1\uFE0F",
+            "color": "gray"
+          },
+          "accessRoles": [
+            "root"
+          ]
+        },
+        {
+          "table": "clientauthenticationrequests",
+          "label": "clientauthenticationrequests",
+          "Identifier": "Id",
+          "description": "Authentication requests made by clients",
+          "displayFields": [
+            {
+              "name": "AppId",
+              "label": "AppId"
+            },
+            {
+              "name": "UserId",
+              "label": "UserId"
+            },
+            {
+              "name": "EventHistory",
+              "label": "EventHistory"
+            },
+            {
+              "name": "CodeRequestDate",
+              "label": "CodeRequestDate"
+            },
+            {
+              "name": "CodeIssueDate",
+              "label": "CodeIssueDate"
+            },
+            {
+              "name": "TokenRequestDate",
+              "label": "TokenRequestDate"
+            }
+          ],
+          "editFields": [
+            {
+              "name": "AppId",
+              "label": "AppId",
+              "type": "select",
+              "relation": {
+                "table": "apps",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "UserId",
+              "label": "UserId",
+              "type": "select",
+              "relation": {
+                "table": "users",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "EventHistory",
+              "label": "EventHistory",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "CodeRequestDate",
+              "label": "CodeRequestDate",
+              "type": "datetime",
+              "relation": null
+            },
+            {
+              "name": "CodeIssueDate",
+              "label": "CodeIssueDate",
+              "type": "datetime",
+              "relation": null
+            },
+            {
+              "name": "TokenRequestDate",
+              "label": "TokenRequestDate",
+              "type": "datetime",
+              "relation": null
+            }
+          ],
+          "createFields": [
+            {
+              "name": "AppId",
+              "label": "AppId",
+              "type": "select",
+              "relation": {
+                "table": "apps",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "UserId",
+              "label": "UserId",
+              "type": "select",
+              "relation": {
+                "table": "users",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "EventHistory",
+              "label": "EventHistory",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "CodeRequestDate",
+              "label": "CodeRequestDate",
+              "type": "datetime",
+              "relation": null
+            },
+            {
+              "name": "CodeIssueDate",
+              "label": "CodeIssueDate",
+              "type": "datetime",
+              "relation": null
+            },
+            {
+              "name": "TokenRequestDate",
+              "label": "TokenRequestDate",
+              "type": "datetime",
+              "relation": null
+            }
+          ],
+          "searchFields": [
+            "Id",
+            "AppId",
+            "UserId",
+            "EventHistory",
+            "CodeRequestDate",
+            "CodeIssueDate",
+            "TokenRequestDate"
+          ],
+          "permissions": {
+            "allowCreate": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowEdit": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowDelete": {
+              "accessRoles": [
+                "root"
+              ]
+            }
+          },
+          "pagination": true,
+          "ui": {
+            "icon": "\uD83D\uDCE5",
+            "color": "gray"
+          },
+          "accessRoles": [
+            "root"
+          ]
+        },
+        {
+          "table": "clienttypes",
+          "label": "clienttypes",
+          "Identifier": "Id",
+          "description": "Types of client applications",
+          "displayFields": [
+            {
+              "name": "Name",
+              "label": "Name"
+            },
+            {
+              "name": "Description",
+              "label": "Description"
+            }
+          ],
+          "editFields": [
+            {
+              "name": "Name",
+              "label": "Name",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "Description",
+              "label": "Description",
+              "type": "text",
+              "relation": null
+            }
+          ],
+          "createFields": [
+            {
+              "name": "Name",
+              "label": "Name",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "Description",
+              "label": "Description",
+              "type": "text",
+              "relation": null
+            }
+          ],
+          "searchFields": [
+            "Id",
+            "Name",
+            "Description",
+            "CreationDate"
+          ],
+          "permissions": {
+            "allowCreate": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowEdit": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowDelete": {
+              "accessRoles": [
+                "root"
+              ]
+            }
+          },
+          "pagination": true,
+          "ui": {
+            "icon": "\uD83E\uDDE9",
+            "color": "gray"
+          },
+          "accessRoles": [
+            "root"
+          ]
+        },
+        {
+          "table": "userapploginproviders",
+          "label": "userapploginproviders",
+          "Identifier": "Id",
+          "description": "Login providers used by users per app",
+          "displayFields": [
+            {
+              "name": "UserId",
+              "label": "UserId"
+            },
+            {
+              "name": "AppId",
+              "label": "AppId"
+            },
+            {
+              "name": "AuthProviderId",
+              "label": "AuthProviderId"
+            }
+          ],
+          "editFields": [
+            {
+              "name": "UserId",
+              "label": "UserId",
+              "type": "select",
+              "relation": {
+                "table": "users",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "AppId",
+              "label": "AppId",
+              "type": "select",
+              "relation": {
+                "table": "apps",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "AuthProviderId",
+              "label": "AuthProviderId",
+              "type": "select",
+              "relation": {
+                "table": "authproviders",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            }
+          ],
+          "createFields": [
+            {
+              "name": "UserId",
+              "label": "UserId",
+              "type": "select",
+              "relation": {
+                "table": "users",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "AppId",
+              "label": "AppId",
+              "type": "select",
+              "relation": {
+                "table": "apps",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "AuthProviderId",
+              "label": "AuthProviderId",
+              "type": "select",
+              "relation": {
+                "table": "authproviders",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            }
+          ],
+          "searchFields": [
+            "Id",
+            "UserId",
+            "AppId",
+            "AuthProviderId",
+            "CreationDate"
+          ],
+          "permissions": {
+            "allowCreate": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowEdit": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowDelete": {
+              "accessRoles": [
+                "root"
+              ]
+            }
+          },
+          "pagination": true,
+          "ui": {
+            "icon": "\uD83D\uDD27",
+            "color": "gray"
+          },
+          "accessRoles": [
+            "root"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "description": "View and manage user accounts, including details, statuses, and assigned roles.",
+      "entities": [
+        {
+          "table": "users",
+          "label": "users",
+          "Identifier": "Id",
+          "description": "All registered users",
+          "displayFields": [
+            {
+              "name": "Email",
+              "label": "Email"
+            },
+            {
+              "name": "Mobile",
+              "label": "Mobile"
+            },
+            {
+              "name": "Name",
+              "label": "Name"
+            },
+            {
+              "name": "Password",
+              "label": "Password"
+            },
+            {
+              "name": "IsActive",
+              "label": "IsActive"
+            },
+            {
+              "name": "LoginAttempt",
+              "label": "LoginAttempt"
+            },
+            {
+              "name": "IsEmailVerified",
+              "label": "IsEmailVerified"
+            },
+            {
+              "name": "IsMobileVerified",
+              "label": "IsMobileVerified"
+            }
+          ],
+          "editFields": [
+            {
+              "name": "Email",
+              "label": "Email",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "Mobile",
+              "label": "Mobile",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "Name",
+              "label": "Name",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "Password",
+              "label": "Password",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "IsActive",
+              "label": "IsActive",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "LoginAttempt",
+              "label": "LoginAttempt",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "IsEmailVerified",
+              "label": "IsEmailVerified",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "IsMobileVerified",
+              "label": "IsMobileVerified",
+              "type": "text",
+              "relation": null
+            }
+          ],
+          "createFields": [
+            {
+              "name": "Email",
+              "label": "Email",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "Mobile",
+              "label": "Mobile",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "Name",
+              "label": "Name",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "Password",
+              "label": "Password",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "IsActive",
+              "label": "IsActive",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "LoginAttempt",
+              "label": "LoginAttempt",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "IsEmailVerified",
+              "label": "IsEmailVerified",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "IsMobileVerified",
+              "label": "IsMobileVerified",
+              "type": "text",
+              "relation": null
+            }
+          ],
+          "searchFields": [
+            "Id",
+            "WebGuid",
+            "Email",
+            "Mobile",
+            "Name",
+            "Password",
+            "IsActive",
+            "LoginAttempt",
+            "IsEmailVerified",
+            "IsMobileVerified",
+            "CreationDate",
+            "UpdateDate",
+            "LastActivityDate"
+          ],
+          "permissions": {
+            "allowCreate": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowEdit": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowDelete": {
+              "accessRoles": [
+                "root"
+              ]
+            }
+          },
+          "pagination": true,
+          "ui": {
+            "icon": "\uD83D\uDC64",
+            "color": "gray"
+          },
+          "accessRoles": [
+            "root"
+          ]
+        },
+        {
+          "table": "userinapps",
+          "label": "userinapps",
+          "Identifier": "Id",
+          "description": "User memberships in apps",
+          "displayFields": [
+            {
+              "name": "UserId",
+              "label": "UserId"
+            },
+            {
+              "name": "AppId",
+              "label": "AppId"
+            }
+          ],
+          "editFields": [
+            {
+              "name": "UserId",
+              "label": "UserId",
+              "type": "select",
+              "relation": {
+                "table": "users",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "AppId",
+              "label": "AppId",
+              "type": "select",
+              "relation": {
+                "table": "apps",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            }
+          ],
+          "createFields": [
+            {
+              "name": "UserId",
+              "label": "UserId",
+              "type": "select",
+              "relation": {
+                "table": "users",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "AppId",
+              "label": "AppId",
+              "type": "select",
+              "relation": {
+                "table": "apps",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            }
+          ],
+          "searchFields": [
+            "Id",
+            "UserId",
+            "AppId",
+            "CreationDate"
+          ],
+          "permissions": {
+            "allowCreate": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowEdit": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowDelete": {
+              "accessRoles": [
+                "root"
+              ]
+            }
+          },
+          "pagination": true,
+          "ui": {
+            "icon": "\uD83D\uDCC2",
+            "color": "gray"
+          },
+          "accessRoles": [
+            "root"
+          ]
+        },
+        {
+          "table": "userinroles",
+          "label": "userinroles",
+          "Identifier": "Id",
+          "description": "Roles assigned to users",
+          "displayFields": [
+            {
+              "name": "UserId",
+              "label": "UserId"
+            },
+            {
+              "name": "RoleId",
+              "label": "RoleId"
+            }
+          ],
+          "editFields": [
+            {
+              "name": "UserId",
+              "label": "UserId",
+              "type": "select",
+              "relation": {
+                "table": "users",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "RoleId",
+              "label": "RoleId",
+              "type": "select",
+              "relation": {
+                "table": "roles",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            }
+          ],
+          "createFields": [
+            {
+              "name": "UserId",
+              "label": "UserId",
+              "type": "select",
+              "relation": {
+                "table": "users",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "RoleId",
+              "label": "RoleId",
+              "type": "select",
+              "relation": {
+                "table": "roles",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            }
+          ],
+          "searchFields": [
+            "Id",
+            "UserId",
+            "RoleId",
+            "CreationDate"
+          ],
+          "permissions": {
+            "allowCreate": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowEdit": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowDelete": {
+              "accessRoles": [
+                "root"
+              ]
+            }
+          },
+          "pagination": true,
+          "ui": {
+            "icon": "\uD83D\uDDC2\uFE0F",
+            "color": "gray"
+          },
+          "accessRoles": [
+            "root"
+          ]
+        },
+        {
+          "table": "usercustomfieldvalues",
+          "label": "usercustomfieldvalues",
+          "Identifier": "Id",
+          "description": "Custom field values set by users",
+          "displayFields": [
+            {
+              "name": "UserId",
+              "label": "UserId"
+            },
+            {
+              "name": "FieldValue",
+              "label": "FieldValue"
+            },
+            {
+              "name": "CustomFieldId",
+              "label": "CustomFieldId"
+            }
+          ],
+          "editFields": [
+            {
+              "name": "UserId",
+              "label": "UserId",
+              "type": "select",
+              "relation": {
+                "table": "users",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "FieldValue",
+              "label": "FieldValue",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "CustomFieldId",
+              "label": "CustomFieldId",
+              "type": "select",
+              "relation": {
+                "table": "customfields",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            }
+          ],
+          "createFields": [
+            {
+              "name": "UserId",
+              "label": "UserId",
+              "type": "select",
+              "relation": {
+                "table": "users",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "FieldValue",
+              "label": "FieldValue",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "CustomFieldId",
+              "label": "CustomFieldId",
+              "type": "select",
+              "relation": {
+                "table": "customfields",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            }
+          ],
+          "searchFields": [
+            "Id",
+            "UserId",
+            "FieldValue",
+            "CustomFieldId",
+            "CreationDate"
+          ],
+          "permissions": {
+            "allowCreate": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowEdit": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowDelete": {
+              "accessRoles": [
+                "root"
+              ]
+            }
+          },
+          "pagination": true,
+          "ui": {
+            "icon": "\uD83D\uDCCB",
+            "color": "gray"
+          },
+          "accessRoles": [
+            "root"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Roles and Permissions",
+      "description": "Define and assign user roles and permissions to control access to different parts of the system.",
+      "entities": [
+        {
+          "table": "roles",
+          "label": "roles",
+          "Identifier": "Id",
+          "description": "User roles and permissions",
+          "displayFields": [
+            {
+              "name": "AppId",
+              "label": "AppId"
+            },
+            {
+              "name": "InnerName",
+              "label": "InnerName"
+            },
+            {
+              "name": "Name",
+              "label": "Name"
+            },
+            {
+              "name": "Description",
+              "label": "Description"
+            }
+          ],
+          "editFields": [
+            {
+              "name": "AppId",
+              "label": "AppId",
+              "type": "select",
+              "relation": {
+                "table": "apps",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "InnerName",
+              "label": "InnerName",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "Name",
+              "label": "Name",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "Description",
+              "label": "Description",
+              "type": "text",
+              "relation": null
+            }
+          ],
+          "createFields": [
+            {
+              "name": "AppId",
+              "label": "AppId",
+              "type": "select",
+              "relation": {
+                "table": "apps",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "InnerName",
+              "label": "InnerName",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "Name",
+              "label": "Name",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "Description",
+              "label": "Description",
+              "type": "text",
+              "relation": null
+            }
+          ],
+          "searchFields": [
+            "Id",
+            "AppId",
+            "InnerName",
+            "Name",
+            "Description",
+            "CreationDate"
+          ],
+          "permissions": {
+            "allowCreate": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowEdit": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowDelete": {
+              "accessRoles": [
+                "root"
+              ]
+            }
+          },
+          "pagination": true,
+          "ui": {
+            "icon": "\uD83D\uDC65",
+            "color": "gray"
+          },
+          "accessRoles": [
+            "root"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Custom Fields",
+      "description": "Create and manage additional user attributes to tailor the user profile structure to your needs.",
+      "entities": [
+        {
+          "table": "customfields",
+          "label": "customfields",
+          "Identifier": "Id",
+          "description": "Globally defined custom fields",
+          "displayFields": [
+            {
+              "name": "FieldName",
+              "label": "FieldName"
+            },
+            {
+              "name": "IsMandatory",
+              "label": "IsMandatory"
+            },
+            {
+              "name": "FieldTypeId",
+              "label": "FieldTypeId"
+            },
+            {
+              "name": "FieldEntityId",
+              "label": "FieldEntityId"
+            },
+            {
+              "name": "Description",
+              "label": "Description"
+            },
+            {
+              "name": "DefaultValue",
+              "label": "DefaultValue"
+            }
+          ],
+          "editFields": [
+            {
+              "name": "FieldName",
+              "label": "FieldName",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "IsMandatory",
+              "label": "IsMandatory",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "FieldTypeId",
+              "label": "FieldTypeId",
+              "type": "select",
+              "relation": {
+                "table": "fieldtypes",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "FieldEntityId",
+              "label": "FieldEntityId",
+              "type": "select",
+              "relation": {
+                "table": "fieldentities",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "Description",
+              "label": "Description",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "DefaultValue",
+              "label": "DefaultValue",
+              "type": "text",
+              "relation": null
+            }
+          ],
+          "createFields": [
+            {
+              "name": "FieldName",
+              "label": "FieldName",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "IsMandatory",
+              "label": "IsMandatory",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "FieldTypeId",
+              "label": "FieldTypeId",
+              "type": "select",
+              "relation": {
+                "table": "fieldtypes",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "FieldEntityId",
+              "label": "FieldEntityId",
+              "type": "select",
+              "relation": {
+                "table": "fieldentities",
+                "valueField": "Id",
+                "labelField": "Id"
+              }
+            },
+            {
+              "name": "Description",
+              "label": "Description",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "DefaultValue",
+              "label": "DefaultValue",
+              "type": "text",
+              "relation": null
+            }
+          ],
+          "searchFields": [
+            "Id",
+            "FieldName",
+            "IsMandatory",
+            "FieldTypeId",
+            "FieldEntityId",
+            "Description",
+            "DefaultValue",
+            "CreationDate"
+          ],
+          "permissions": {
+            "allowCreate": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowEdit": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowDelete": {
+              "accessRoles": [
+                "root"
+              ]
+            }
+          },
+          "pagination": true,
+          "ui": {
+            "icon": "\uD83D\uDCDD",
+            "color": "gray"
+          },
+          "accessRoles": [
+            "root"
+          ]
+        },
+        {
+          "table": "fieldentities",
+          "label": "fieldentities",
+          "Identifier": "Id",
+          "description": "Entities that can have custom fields",
+          "displayFields": [
+            {
+              "name": "Name",
+              "label": "Name"
+            },
+            {
+              "name": "Description",
+              "label": "Description"
+            }
+          ],
+          "editFields": [
+            {
+              "name": "Name",
+              "label": "Name",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "Description",
+              "label": "Description",
+              "type": "text",
+              "relation": null
+            }
+          ],
+          "createFields": [
+            {
+              "name": "Name",
+              "label": "Name",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "Description",
+              "label": "Description",
+              "type": "text",
+              "relation": null
+            }
+          ],
+          "searchFields": [
+            "Id",
+            "Name",
+            "Description",
+            "CreationDate"
+          ],
+          "permissions": {
+            "allowCreate": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowEdit": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowDelete": {
+              "accessRoles": [
+                "root"
+              ]
+            }
+          },
+          "pagination": true,
+          "ui": {
+            "icon": "\uD83D\uDCE6",
+            "color": "gray"
+          },
+          "accessRoles": [
+            "root"
+          ]
+        },
+        {
+          "table": "fieldtypes",
+          "label": "fieldtypes",
+          "Identifier": "Id",
+          "description": "Types of allowable field formats",
+          "displayFields": [
+            {
+              "name": "Name",
+              "label": "Name"
+            },
+            {
+              "name": "Description",
+              "label": "Description"
+            }
+          ],
+          "editFields": [
+            {
+              "name": "Name",
+              "label": "Name",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "Description",
+              "label": "Description",
+              "type": "text",
+              "relation": null
+            }
+          ],
+          "createFields": [
+            {
+              "name": "Name",
+              "label": "Name",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "Description",
+              "label": "Description",
+              "type": "text",
+              "relation": null
+            }
+          ],
+          "searchFields": [
+            "Id",
+            "Name",
+            "Description",
+            "CreationDate"
+          ],
+          "permissions": {
+            "allowCreate": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowEdit": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowDelete": {
+              "accessRoles": [
+                "root"
+              ]
+            }
+          },
+          "pagination": true,
+          "ui": {
+            "icon": "\uD83D\uDD23",
+            "color": "gray"
+          },
+          "accessRoles": [
+            "root"
+          ]
+        },
+        {
+          "table": "view_customfieldsappdetails",
+          "label": "view_customfieldsappdetails",
+          "Identifier": "CustomFieldId",
+          "description": "View of app-specific custom field details",
+          "displayFields": [
+            {
+              "name": "CustomFieldId",
+              "label": "CustomFieldId"
+            },
+            {
+              "name": "FieldName",
+              "label": "FieldName"
+            },
+            {
+              "name": "IsMandatory",
+              "label": "IsMandatory"
+            },
+            {
+              "name": "FieldTypeName",
+              "label": "FieldTypeName"
+            },
+            {
+              "name": "DefaultValue",
+              "label": "DefaultValue"
+            },
+            {
+              "name": "AppId",
+              "label": "AppId"
+            }
+          ],
+          "editFields": [
+            {
+              "name": "CustomFieldId",
+              "label": "CustomFieldId",
+              "type": "number",
+              "relation": null
+            },
+            {
+              "name": "FieldName",
+              "label": "FieldName",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "IsMandatory",
+              "label": "IsMandatory",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "FieldTypeName",
+              "label": "FieldTypeName",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "DefaultValue",
+              "label": "DefaultValue",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "AppId",
+              "label": "AppId",
+              "type": "number",
+              "relation": null
+            }
+          ],
+          "createFields": [
+            {
+              "name": "CustomFieldId",
+              "label": "CustomFieldId",
+              "type": "number",
+              "relation": null
+            },
+            {
+              "name": "FieldName",
+              "label": "FieldName",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "IsMandatory",
+              "label": "IsMandatory",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "FieldTypeName",
+              "label": "FieldTypeName",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "DefaultValue",
+              "label": "DefaultValue",
+              "type": "text",
+              "relation": null
+            },
+            {
+              "name": "AppId",
+              "label": "AppId",
+              "type": "number",
+              "relation": null
+            }
+          ],
+          "searchFields": [
+            "CustomFieldId",
+            "FieldName",
+            "IsMandatory",
+            "FieldTypeName",
+            "DefaultValue",
+            "AppId"
+          ],
+          "permissions": {
+            "allowCreate": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowEdit": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowDelete": {
+              "accessRoles": [
+                "root"
+              ]
+            }
+          },
+          "pagination": true,
+          "ui": {
+            "icon": "\uD83D\uDD0D",
+            "color": "gray"
+          },
+          "accessRoles": [
+            "root"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Miscellaneous",
+      "description": "Access additional configuration settings that do not fall under the other categories.",
+      "entities": [
+        {
+          "table": "test",
+          "label": "test",
+          "Identifier": "ColumnTest",
+          "description": "Temporary or testing data table",
+          "displayFields": [
+            {
+              "name": "Descgg",
+              "label": "Descgg"
+            }
+          ],
+          "editFields": [
+            {
+              "name": "Descgg",
+              "label": "Descgg",
+              "type": "number",
+              "relation": null
+            }
+          ],
+          "createFields": [
+            {
+              "name": "Descgg",
+              "label": "Descgg",
+              "type": "number",
+              "relation": null
+            }
+          ],
+          "searchFields": [
+            "ColumnTest",
+            "Descgg"
+          ],
+          "permissions": {
+            "allowCreate": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowEdit": {
+              "accessRoles": [
+                "root"
+              ]
+            },
+            "allowDelete": {
+              "accessRoles": [
+                "root"
+              ]
+            }
+          },
+          "pagination": true,
+          "ui": {
+            "icon": "\uD83E\uDDEA",
+            "color": "gray"
+          },
+          "accessRoles": [
+            "root"
+          ]
+        }
+      ]
+    }
+  ]
+}
