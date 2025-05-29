@@ -1,47 +1,76 @@
 {
-  "env": "dev",
-  "database": "defatltdb",
-  "apiBaseUrl": "https://sddd",
-  "entities": [
+  "apiBaseUrl": "https://crud.webapis.in/api/v1/crud/",
+  "description": "This database is about the customer management.",
+  "groups": [
     {
-      "table": "payments",
-      "label": "Payments",
-      "displayFields": ["Id", "Name"],
-      "editFields": ["Id", "Name"],
-      "searchFields": ["Id", "Name"],
-      "permissions": {
-        "allowCreate": true,
-        "allowEdit": true,
-        "allowDelete": false
-      },
-      "pagination": {
-        "enabled": true,
-        "loadMore": false
-      },
-      "ui": {
-        "icon": "💰",
-        "color": "blue"
-      }
-    },
-    {
-      "table": "clients",
-      "label": "Clients",
-      "displayFields": ["Id", "Name"],
-      "editFields": ["Id", "Name"],
-      "searchFields": ["Id", "Name"],
-      "permissions": {
-        "allowCreate": true,
-        "allowEdit": true,
-        "allowDelete": false
-      },
-      "pagination": {
-        "enabled": true,
-        "loadMore": false
-      },
-      "ui": {
-        "icon": "👥",
-        "color": "green"
-      }
+      "name": "Finance",
+      "description": "Manage finance.",
+      "entities": [
+        {
+          "table": "Payments",
+          "label": "Payments",
+          "description": "Track all incoming and outgoing payments.",
+          "displayFields": [
+            { "name": "Id", "label": "Payment ID", "type": "number" },
+            { "name": "Name", "label": "Payer Name", "type": "text" }
+          ],
+          "editFields": [
+            { "name": "Id", "label": "Payment ID", "type": "number" },
+            {
+              "name": "AppId",
+              "label": "Application",
+              "type": "select",
+              "relation": {
+                "table": "Apps",
+                "valueField": "Id",
+                "labelField": "Name"
+              }
+            }
+          ],
+          "createFields": [
+            { "name": "Id", "label": "Payment ID", "type": "number" },
+            { "name": "Name", "label": "Payer Name", "type": "text" }
+          ],
+          "searchFields": ["Id", "Name"],
+          "permissions": {
+            "allowCreate": {
+              "accessRoles": ["admin", "finance"]
+            },
+            "allowEdit": {
+              "accessRoles": ["admin", "finance"]
+            },
+            "allowDelete": {
+              "accessRoles": ["admin", "finance"]
+            }
+          },
+          "pagination": true,
+          "ui": {
+            "icon": "💰",
+            "color": "blue"
+          }
+        },
+        {
+          "table": "clients",
+          "label": "Clients",
+          "description": "Manage business clients and stakeholders.",
+          "displayFields": ["Id", "Name"],
+          "editFields": ["Id", "Name"],
+          "searchFields": ["Id", "Name"],
+          "permissions": {
+            "allowCreate": true,
+            "allowEdit": true,
+            "allowDelete": false
+          },
+          "pagination": {
+            "enabled": true,
+            "loadMore": false
+          },
+          "ui": {
+            "icon": "👥",
+            "color": "green"
+          }
+        }
+      ]
     }
   ]
 }
