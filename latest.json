@@ -1,0 +1,47 @@
+{
+  "env": "dev",
+  "database": "defatltdb",
+  "apiBaseUrl": "https://sddd",
+  "entities": [
+    {
+      "table": "payments",
+      "label": "Payments",
+      "displayFields": ["Id", "Name"],
+      "editFields": ["Id", "Name"],
+      "searchFields": ["Id", "Name"],
+      "permissions": {
+        "allowCreate": true,
+        "allowEdit": true,
+        "allowDelete": false
+      },
+      "pagination": {
+        "enabled": true,
+        "loadMore": false
+      },
+      "ui": {
+        "icon": "💰",
+        "color": "blue"
+      }
+    },
+    {
+      "table": "clients",
+      "label": "Clients",
+      "displayFields": ["Id", "Name"],
+      "editFields": ["Id", "Name"],
+      "searchFields": ["Id", "Name"],
+      "permissions": {
+        "allowCreate": true,
+        "allowEdit": true,
+        "allowDelete": false
+      },
+      "pagination": {
+        "enabled": true,
+        "loadMore": false
+      },
+      "ui": {
+        "icon": "👥",
+        "color": "green"
+      }
+    }
+  ]
+}
