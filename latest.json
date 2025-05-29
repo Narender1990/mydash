@@ -71,7 +71,8 @@
           "ui": {
             "icon": "👥",
             "color": "green"
-          }
+          },
+          "accessRoles": ["users"]
         }
       ]
     }
