@@ -139,13 +139,13 @@
       "entities": [
         {
           "table": "currencies",
-          "label": "currencies",
+          "label": "Currencies",
           "Identifier": "Id",
           "description": "List of supported currencies and their details",
           "displayFields": [
             {
               "name": "ClientId",
-              "label": "ClientId"
+              "label": "Client Id"
             },
             {
               "name": "Name",
@@ -155,7 +155,7 @@
           "editFields": [
             {
               "name": "ClientId",
-              "label": "ClientId",
+              "label": "Client Id",
               "type": "select",
               "relation": {
                 "table": "clients",
@@ -173,7 +173,7 @@
           "createFields": [
             {
               "name": "ClientId",
-              "label": "ClientId",
+              "label": "Client Id",
               "type": "select",
               "relation": {
                 "table": "clients",
@@ -190,7 +190,7 @@
           ],
           "searchFields": [
             "Id",
-            "ClientId",
+            "Client Id",
             "Name"
           ],
           "permissions": {
