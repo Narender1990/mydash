@@ -139,7 +139,7 @@
       "entities": [
         {
           "table": "currencies",
-          "label": "Currencies",
+          "label": "Currency",
           "Identifier": "Id",
           "description": "List of supported currencies and their details",
           "displayFields": [
