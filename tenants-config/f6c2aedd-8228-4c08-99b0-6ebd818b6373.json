@@ -150,8 +150,7 @@
             {
               "name": "ClientId",
               "label": "Client Id"
-            },
-              
+            }, 
             {
               "name": "Name",
               "label": "Name"
